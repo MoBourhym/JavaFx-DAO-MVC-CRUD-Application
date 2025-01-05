@@ -1,0 +1,24 @@
+Player Info:
+Name: Abdelmajid bouselham
+Position: Java
+Number: 10
+Team: FC Barcelona
+
+Player Info:
+Name: Mohammed Bourhym
+Position: Enset
+Number: 11
+Team: Real Madrid
+
+Player Info:
+Name: Abdelmajid bouselham
+Position: Java
+Number: 10
+Team: Manchester United
+
+Player Info:
+Name: Soufiane
+Position: El boubkari
+Number: 7
+Team: CODM
+

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="ma.enset.mvc.controller.TeamsPlayersController">
+    <!-- Top Section -->
+    <top>
+        <HBox spacing="10" alignment="CENTER" styleClass="header">
+            <Label text="Team and Player Management" styleClass="header-label" />
+        </HBox>
+    </top>
+
+    <!-- Left Section: Team Management -->
+    <left>
+        <VBox spacing="10" styleClass="side-panel">
+            <Label text="Teams" styleClass="section-label" />
+            <TextField fx:id="teamSearchField" promptText="Search for a team..." styleClass="text-field" />
+            <Button text="Search" styleClass="button-search" />
+            <TableView fx:id="teamsTable" prefHeight="200" prefWidth="350" styleClass="table-view">
+                <columns>
+                    <TableColumn fx:id="teamIdColumn" text="ID" prefWidth="50" styleClass="table-column" />
+                    <TableColumn fx:id="teamNameColumn" text="Name" prefWidth="100" styleClass="table-column"/>
+                    <TableColumn fx:id="teamCityColumn" text="City" prefWidth="240" styleClass="table-column"/>
+
+                </columns>
+            </TableView>
+            <!-- Add Team Form -->
+            <HBox spacing="10" alignment="CENTER">
+                <TextField fx:id="teamNameField" promptText="Team Name" styleClass="text-field" />
+                <TextField fx:id="teamCityField" promptText="City" styleClass="text-field" />
+                <Button text="Add Team" styleClass="button-add-team" onAction="#addTeam"/>
+                <Button text="Delete Team" styleClass="button-delete" onAction="#deleteTeam"/>
+            </HBox>
+        </VBox>
+    </left>
+
+    <!-- Center Section: Player Management -->
+    <center>
+        <VBox spacing="10" styleClass="side-panel">
+            <Label text="Players" styleClass="section-label" />
+            <TableView fx:id="playersTable" prefHeight="200" prefWidth="350" styleClass="table-view">
+                <columns>
+                    <TableColumn fx:id="playerIdColumn" text="ID" prefWidth="50" styleClass="table-column" />
+                    <TableColumn fx:id="playerNameColumn" text="Name" prefWidth="100" styleClass="table-column" />
+                    <TableColumn fx:id="playerPositionColumn" text="Position" prefWidth="100" styleClass="table-column" />
+                    <TableColumn fx:id="playerNumberColumn" text="Number"  styleClass="table-column"/>
+                    <TableColumn fx:id="playerTeamColumn" text="Team Number" prefWidth="400" styleClass="table-column"/>
+
+                </columns>
+            </TableView>
+
+            <!-- Add Player Form -->
+            <HBox spacing="10" alignment="CENTER">
+                <TextField fx:id="playerNameField" promptText="Player Name" styleClass="text-field-records" />
+                <TextField fx:id="playerPositionField" promptText="Position" styleClass="text-field-records" />
+                <TextField fx:id="playerNumberField" promptText="Number" styleClass="text-field-records" />
+                <ComboBox fx:id="playerTeamComboBox" promptText="Select Team" styleClass="combo-box" />
+                <Button text="Add Player" styleClass="button-add-player" onAction="#addPlayer"/>
+            </HBox>
+
+            <HBox spacing="10" alignment="CENTER" styleClass="action-buttons">
+                <Button text="Delete Player" styleClass="button-delete" onAction="#deletePlayer" />
+                <Button text="Print Info" styleClass="button-info" onAction="#printInfo" />
+            </HBox>
+        </VBox>
+    </center>
+
+
+</BorderPane>

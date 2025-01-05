@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" >
+    <!-- Top Section -->
+    <top>
+        <HBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+            <Label text="Gestion des Équipes et Joueurs" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+        </HBox>
+    </top>
+
+    <!-- Left Section: Team Management -->
+    <left>
+        <VBox spacing="10" style="-fx-padding: 10; -fx-border-color: #cccccc; -fx-border-width: 1;">
+            <Label text="Équipes" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+            <TextField fx:id="teamSearchField" promptText="Rechercher une équipe..." />
+            <Button text="Rechercher" />
+
+            <TableView fx:id="teamTable" prefHeight="200" prefWidth="200">
+                <columns>
+                    <TableColumn fx:id="teamIdColumn" text="ID" prefWidth="50" />
+                    <TableColumn fx:id="teamNameColumn" text="Nom" prefWidth="100" />
+                    <TableColumn fx:id="teamCityColumn" text="Ville" prefWidth="100" />
+                </columns>
+            </TableView>
+
+            <Button text="Ajouter une équipe"  />
+            <Button text="Supprimer une équipe"  />
+            <Button text="Voir les joueurs"   />
+        </VBox>
+    </left>
+
+    <!-- Center Section: Player Management -->
+    <center>
+        <VBox spacing="10" style="-fx-padding: 10; -fx-border-color: #cccccc; -fx-border-width: 1;">
+            <Label text="Joueurs" style="-fx-font-size: 14px; -fx-font-weight: bold;" />
+            <TableView fx:id="playerTable" prefHeight="200" prefWidth="300">
+                <columns>
+                    <TableColumn fx:id="playerIdColumn" text="ID" prefWidth="50" />
+                    <TableColumn fx:id="playerNameColumn" text="Nom" prefWidth="100" />
+                    <TableColumn fx:id="playerPositionColumn" text="Position" prefWidth="100" />
+                    <TableColumn fx:id="playerNumberColumn" text="Numéro" prefWidth="50" />
+                </columns>
+            </TableView>
+
+            <HBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+                <Button text="Ajouter un joueur"  />
+                <Button text="Supprimer un joueur"  />
+                <Button text="Imprimer les infos"   />
+            </HBox>
+        </VBox>
+    </center>
+
+    <!-- Bottom Section -->
+    <bottom>
+        <HBox spacing="10" alignment="CENTER" style="-fx-padding: 10;">
+            <Button text="Quitter"   />
+        </HBox>
+    </bottom>
+</BorderPane>
